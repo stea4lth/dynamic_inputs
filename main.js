@@ -211,3 +211,7 @@ function SocialLinks(){
 		}
 		// END Social Settings class
 	}
+
+
+
+// used to fix enter key on text input
