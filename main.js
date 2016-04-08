@@ -215,3 +215,14 @@ function SocialLinks(){
 
 
 // used to fix enter key on text input
+// fix Enter Key press on #social-settings
+			$('#social-settings').on('keypress', 'input', function(e){
+				var keyCode = e.keyCode || e.which;
+				if(keyCode === 13){
+					e.stopPropagation ? e.stopPropagation() : (e.cancelBubble=true);
+					e.preventDefault();
+					// trigger save click
+					$(this).closest('.check-input').find('.save').trigger('click');
+					return false;
+				}
+			});
